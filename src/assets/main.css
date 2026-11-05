@@ -1,0 +1,45 @@
+/* src/assets/main.css */
+
+/* 
+  Псевдокласс :root означает, что эти переменные доступны 
+  абсолютно везде в твоем приложении 
+*/
+:root {
+  --color-primary: #ff9100;       /* Основной зеленый */
+  --color-danger: #ff4d4f;        /* Базовый красный (опасность) */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* --- Цвета фона и текста --- */
+  --color-bg-main: var(--color-white);
+  /* Вторичный фон делаем чуть темнее основного (смешиваем с черным на 3%) */
+  --color-bg-secondary: color-mix(in srgb, var(--color-bg-main), var(--color-black) 3%);
+  
+  --color-text-main: color-mix(in srgb, var(--color-primary), var(--color-black) 60%);
+  /* Приглушенный текст (смешиваем основной текст с белым на 40%) */
+  --color-text-muted: color-mix(in srgb, var(--color-text-main), var(--color-white) 40%);
+
+  /* --- Состояния (Hover) --- */
+  /* Темнее основного на 15% */
+  --color-primary-hover: color-mix(in srgb, var(--color-primary), var(--color-black) 15%);
+  /* Светлее красного на 15% */
+  --color-danger-hover: color-mix(in srgb, var(--color-danger), var(--color-white) 15%);
+
+  /* --- Рамки --- */
+  /* Делаем рамку светлее основного текста на 80% (получается светло-серый) */
+  --color-border: color-mix(in srgb, var(--color-primary), var(--color-white) 40%);
+  
+  /* --- Радиусы (скругления) --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  /* --- Отступы (для единообразия) --- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+
+  --main-width: 600px; /* Максимальная ширина приложения */
+
+  --font-size-sm: 14px;
+  --font-size-md: 16px; 
+}
